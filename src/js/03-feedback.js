@@ -29,8 +29,10 @@ function onBtnSubmit(event) {
     event.preventDefault();
     if (!refs.email.value || !refs.message.value) {
         alert('Please enter your email and message');
-    };
-    console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
-    refs.form.reset();
-    localStorage.removeItem('feedback-form-state');
+    } else {
+        console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
+        refs.form.reset();
+        localStorage.removeItem('feedback-form-state');
+    }
+    
 };
